@@ -1,0 +1,190 @@
+# Group inheritance
+#
+# Any inherited groups prefixed with a g: are global groups
+# and are inherited from the GlobalGroups.yml.
+#
+# Groups without the g: prefix are groups local to this world
+# and are defined in the this groups.yml file.
+#
+# Local group inheritances define your promotion tree when using 'manpromote/mandemote'
+
+groups:
+  Unite:
+    default: false
+    permissions:
+    - essentials.chat.color
+    - essentials.exp
+    - essentials.ext
+    - essentials.feed
+    - essentials.skull
+    - ultimatekits.kit.unite
+    inheritance:
+    - master
+    info:
+      build: false
+      prefix: '&8[&3Unite&8] &f'
+      suffix: ''
+  Master:
+    default: false
+    permissions:
+    - essentials.craft
+    - essentials.hat
+    - essentials.ptime
+    - ultimatekits.kit.master
+    inheritance:
+    - elite
+    info:
+      build: false
+      prefix: '&8[&4Master&8] &f'
+      suffix: ''
+  sh_admin:
+    default: false
+    permissions: []
+    inheritance: []
+    info:
+      build: false
+      prefix: '&c[ADMIN] &7'
+      suffix: ''
+  sh_minehut:
+    default: false
+    permissions: []
+    inheritance: []
+    info:
+      build: false
+      prefix: ''
+      suffix: ''
+  sh_developer:
+    default: false
+    permissions: []
+    inheritance:
+    - sh_junior
+    - sh_mod
+    - senior_mod
+    info:
+      build: false
+      prefix: '&c[DEV] &7'
+      suffix: ''
+  senior_mod:
+    default: false
+    permissions: []
+    inheritance:
+    - sh_mod
+    info:
+      build: false
+      prefix: '&6[&6SR.MOD] &7'
+      suffix: ''
+  sh_mod:
+    default: false
+    permissions:
+    - essentials.teleport
+    - rank.mod
+    inheritance:
+    - sh_junior
+    info:
+      build: false
+      prefix: '&e[MOD] &7'
+      suffix: ''
+  MH:
+    default: false
+    permissions: []
+    inheritance:
+    - elite
+    info:
+      build: false
+      prefix: ''
+      suffix: ''
+  Elite:
+    default: false
+    permissions:
+    - essentials.afk.kickexempt
+    - essentials.clearinventory
+    - essentials.enderchest
+    - nightvision.use
+    - rank.elite
+    - ultimatekits.kit.elite
+    inheritance:
+    - default
+    info:
+      build: false
+      prefix: '&8[&6Elite&8] &f'
+      suffix: ''
+  Veteran:
+    default: false
+    permissions:
+    - essentials.helpop
+    - essentials.keepxp
+    - essentials.signs.color
+    - essentials.time
+    inheritance:
+    - unite
+    info:
+      build: false
+      prefix: '&8[&e&oVeteran&8] &f'
+      suffix: ''
+  Default:
+    default: true
+    permissions:
+    - -bukkit.command.kill
+    - -minecraft.command.me
+    - -minecraft.command.plugins
+    - crazyauctions.access
+    - crazyauctions.bid.1000000
+    - crazyauctions.buy.1000000
+    - crazyauctions.sell
+    - crazyauctions.sell.1000000
+    - essentials.afk
+    - essentials.balance
+    - essentials.balance.top
+    - essentials.balancetop
+    - essentials.home
+    - essentials.homes
+    - essentials.near
+    - essentials.pay
+    - essentials.realname
+    - essentials.sethome
+    - essentials.signs.use.*
+    - essentials.spawn
+    - essentials.tpa
+    - essentials.tpaccept
+    - essentials.tpahere
+    - essentials.tpcancel
+    - essentials.tpdeny
+    - essentials.tps
+    - essentials.tptoggle
+    - essentials.warp
+    - essentials.warps
+    - essentials.warps.shop
+    - playerreport.report
+    - rank.default
+    - ultimatekits.kit.starter
+    inheritance:
+    - g:groupmanager_default
+    - g:bukkit_default
+    - g:essentials_default
+    - g:towny_default
+    info:
+      build: false
+      prefix: '&7[Islander] &7'
+      suffix: ''
+  sh_junior:
+    default: false
+    permissions:
+    - essentials.gamemode
+    - essentials.gamemode.spectator
+    - essentials.gamemode.survival
+    - essentials.spectator
+    - essentials.survival
+    - essentials.tp
+    - essentials.tphere
+    - essentials.vanish
+    - megachatcolor.color.*
+    - megachatcolor.color.f
+    - PlayerReport.Notify
+    - playerreport.reports
+    - rank.jrmod
+    inheritance:
+    - default
+    info:
+      build: false
+      prefix: '&e[JR.MOD] &7'
+      suffix: ''
